@@ -568,6 +568,19 @@ a.filelink:hover { background: #f6e6f2; }
 .help:hover { transform: scale(1.08); }
 .help.pulse { animation: helpPulse 1.4s ease-in-out infinite; }
 @keyframes helpPulse { 0%, 100% { box-shadow: 0 0 0 0 #e7c98a99; } 50% { box-shadow: 0 0 0 14px #e7c98a00; } }
+  /* ===== ТЕЛЕФОНЫ: уменьшаем стол целиком, чтобы всё влезало ===== */
+@media (max-width: 700px) {
+  .table { width: 600px; left: 50%; transform: translateX(-50%) scale(.8); transform-origin: center bottom; }
+  #tablet.open, #tablet.open:hover { transform: scale(1.3); }
+}
+@media (max-width: 480px) {
+  .table { transform: translateX(-50%) scale(.58); }
+  #tablet.open, #tablet.open:hover { transform: scale(1.9); height: 96%; }
+  .plate { transform: scale(1.05); }
+  #tablet:not(.open) { transform: scale(.5); }
+  button.phone { width: 100px; }
+  button.candle { width: 62px; right: 25%; }
+}
 </style>
 </head>
 <body>
