@@ -928,8 +928,7 @@ const scary = [
   { name: "Глазированная клубника", sub: "", story: "Ищешь" },
   { name: "Нить и нож", sub: "", story: "Тело одно, а мысли две.\n\n Та чья воля сильней, та и будет выше королей" }
 ];
-dishes.forEach((d, i) => {
-];
+
 dishes.forEach((d, i) => {
   const o = { name: d.name, sub: d.sub, story: d.story };
   ["name", "sub", "story"].forEach(k => Object.defineProperty(d, k, { get: () => blood ? scary[i][k] : o[k] }));
